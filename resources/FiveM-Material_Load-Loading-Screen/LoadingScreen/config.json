@@ -1,0 +1,42 @@
+[
+	{
+		"useBackgroundColour" : "true",
+		"backgroundColour" : "20,20,20",
+		"useBackgroundImage" : "true",
+		"backgroundImagePath" : "images/backgroundImg2.jpg",
+		"useTextColour" : "true",
+		"textColour" : "0,0,0",
+		"useBoldText" : "true",
+		"serverTitle" : "Elysium Beta Server",
+		"playAudioInBackground" : "true",
+		"YTVideoID" : "Eu3SdvNmBQY",
+		"videoVolume" : "1"
+	},
+	{
+		"rule1" : "Kein RDM oder VDM",
+		"rule2" : "Ein Mikrofon ist Voraussetzung",
+		"rule3" : "Kein ausnutzen von Bugs",
+		"rule4" : "keine Cheats anwenden",
+		"rule5" : "Kein Rassismus",
+		"rule6" : "Keine anderen Belästigen",
+		"rule7" : "Den gesunden Menschenverstand verwenden"
+	},
+	{
+		"servers1" : "Server ist in Beta",
+		"servers2" : "Teamspeak: ts.elysium-rp.de",
+		"servers3" : "Discord: https://discord.gg/ckCQyfT",
+		"servers4" : "WhiteList über TeamSpeak",
+		"servers5" : "",
+		"servers6" : "",
+		"servers7" : ""
+	},
+	{
+		"content1" : "Charakteranpassung",
+		"content2" : "Kaufbare & lagerfähige Fahrzeuge",
+		"content3" : "Whitelist für Polizei & Medic",
+		"content4" : "Mehere Jobs (ACLS, Fishing, Gang, etc)",
+		"content5" : "Banks & ATMs",
+		"content6" : "Custom Fahrzeuge",
+		"content7" : "Handy-Mitteilungen & Anrufen"
+	}
+]
