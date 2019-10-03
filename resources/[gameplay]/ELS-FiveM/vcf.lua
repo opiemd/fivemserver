@@ -1,0 +1,15 @@
+vcf_files = {
+	"fa_ambulance.xml",
+	"hdwrecker.xml",
+	"fbi2.xml",
+	"police.xml",
+	"police2.xml",
+	"police21.xml",
+	"police31.xml",
+	"police4.xml",
+	"police5.xml",
+	"police51.xml",
+	"police6.xml",
+	"police61.xml",
+	"police7.xml",
+}
