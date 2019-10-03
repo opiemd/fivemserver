@@ -32,12 +32,13 @@ DROP TABLE IF EXISTS `owned_vehicles`;
 CREATE TABLE IF NOT EXISTS `owned_vehicles` (
   `vehicle` longtext NOT NULL,
   `owner` varchar(60) NOT NULL,
-  `state` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'Etat de la voiture',
+  `stored` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'Etat de la voiture',
   `garage_name` varchar(50) NOT NULL DEFAULT 'Garage_Centre',
   `fourrieremecano` tinyint(1) NOT NULL DEFAULT '0',
   `vehiclename` varchar(50) NOT NULL DEFAULT 'voiture',
   `plate` varchar(50) NOT NULL,
-  `vehicle_type` varchar(10) NOT NULL DEFAULT 'car',
+  `type` varchar(10) NOT NULL DEFAULT 'car',
+  `job` varchar(50),
   PRIMARY KEY (`plate`),
   KEY `vehsowned` (`owner`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

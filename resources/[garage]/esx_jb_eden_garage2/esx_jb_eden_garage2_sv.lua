@@ -4,7 +4,7 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 
 --Recupere les véhicules
-ESX.RegisterServerCallback('eden_garage:getVehicles', function(source, cb, KindOfVehicle, garage_name, type)
+ESX.RegisterServerCallback('eden_garage:getVehicles', function(source, cb, KindOfVehicle, garage_name, vehicle_type)
 	local _source = source
 	local identifier = ""
 	if KindOfVehicle ~= "personal" then
@@ -13,9 +13,9 @@ ESX.RegisterServerCallback('eden_garage:getVehicles', function(source, cb, KindO
 		identifier = GetPlayerIdentifiers(_source)[1]
 	end
 
-	MySQL.Async.fetchAll("SELECT * FROM owned_vehicles WHERE owner = @identifier and type=@type", {
+	MySQL.Async.fetchAll("SELECT * FROM owned_vehicles WHERE owner = @identifier and type=@vehicle_type", {
 		['@identifier'] = identifier,
-		['@type'] = type
+		['@vehicle_type'] = vehicle_type
 	}, function(result)
 		cb(result)
 	end)
@@ -31,7 +31,7 @@ end)
 -- Fin --Recupere les véhicules
 
 --Stock les véhicules
-ESX.RegisterServerCallback('eden_garage:stockv',function(source,cb, vehicleProps, KindOfVehicle, garage_name, type)
+ESX.RegisterServerCallback('eden_garage:stockv',function(source,cb, vehicleProps, KindOfVehicle, garage_name, vehicle_type)
 	local identifier = ""
 	local _source = source
 	if KindOfVehicle ~= "personal" then
@@ -41,7 +41,7 @@ ESX.RegisterServerCallback('eden_garage:stockv',function(source,cb, vehicleProps
 	end
 	local vehplate = vehicleProps.plate
 	local vehiclemodel = vehicleProps.model
-	MySQL.Async.fetchAll("SELECT * FROM owned_vehicles where plate=@plate and owner=@identifier and type = @type",{['@plate'] = vehplate, ['@identifier'] = identifier, ['@type'] = type}, function(result)
+	MySQL.Async.fetchAll("SELECT * FROM owned_vehicles where plate=@plate and owner=@identifier and type = @vehicle_type",{['@plate'] = vehplate, ['@identifier'] = identifier, ['@vehicle_type'] = vehicle_type}, function(result)
 		if result[1] ~= nil then
 			local vehprop = json.encode(vehicleProps)
 			local originalvehprops = json.decode(result[1].vehicle)
@@ -93,9 +93,9 @@ end)
 
 --Change le state du véhicule
 RegisterServerEvent('eden_garage:modifystate')
-AddEventHandler('eden_garage:modifystate', function(plate, state)
-	MySQL.Async.execute("UPDATE owned_vehicles SET state =@state WHERE plate=@plate",{
-		['@state'] = state,
+AddEventHandler('eden_garage:modifystate', function(plate, stored)
+	MySQL.Async.execute("UPDATE owned_vehicles SET `stored` =@stored WHERE plate=@plate",{
+		['@stored'] = stored,
 		['@plate'] = plate
 	})
 end)	
@@ -124,7 +124,7 @@ AddEventHandler('esx_eden_garage:MoveGarage', function(vehicleplate, garage_name
 	MySQL.Sync.execute("UPDATE owned_vehicles SET garage_name =@garage_name WHERE plate=@plate",{['@garage_name'] = garage_name , ['@plate'] = vehicleplate})
 end)
 
-ESX.RegisterServerCallback('eden_garage:getOutVehicles',function(source, cb, KindOfVehicle, garage_name, type)	
+ESX.RegisterServerCallback('eden_garage:getOutVehicles',function(source, cb, KindOfVehicle, garage_name, vehicle_type)	
 	local _source = source
 	local identifier = ""
 	if KindOfVehicle ~= "personal" then
@@ -133,10 +133,10 @@ ESX.RegisterServerCallback('eden_garage:getOutVehicles',function(source, cb, Kin
 		identifier = GetPlayerIdentifiers(_source)[1]
 	end
 
-	MySQL.Async.fetchAll("SELECT * FROM owned_vehicles WHERE owner = @identifier AND (state = FALSE OR fourrieremecano = TRUE) AND garage_name = @garage_name AND type=@type",{
+	MySQL.Async.fetchAll("SELECT * FROM owned_vehicles WHERE owner = @identifier AND (`stored` = FALSE OR fourrieremecano = TRUE) AND garage_name = @garage_name AND type=@vehicle_type",{
 		['@identifier'] = identifier,
 		['@garage_name'] = garage_name, 
-		['@type'] = type
+		['@vehicle_type'] = vehicle_type
 	}, function(result)
 		cb(result)
 	end)
@@ -158,7 +158,7 @@ end)
 if Config.StoreOnServerStart then
 	AddEventHandler('onMySQLReady', function()
 
-		MySQL.Sync.execute("UPDATE owned_vehicles SET state=true WHERE state=false", {})
+		MySQL.Sync.execute("UPDATE owned_vehicles SET `stored`=true WHERE `stored`=false", {})
 
 	end)
 end
