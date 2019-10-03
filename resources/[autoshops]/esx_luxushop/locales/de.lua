@@ -1,0 +1,16 @@
+Locales['de'] = {
+  ['not_enough_money']    = 'Du hast nicht genügend Geld',
+  ['luxu_belongs']       = 'Ein Fahrzeug mit dem Nummernschild ~y~%s~s~ gehört jetzt ~b~dir~s~',
+  ['generic_shopitem']    = '$%s',
+  ['luxu_dealer']        = 'Luxus Händler',
+  ['buy_luxu_shop']      = 'Möchtest du %s mit %s kg Kofferraum für $%s kaufen?',
+  ['no']                  = 'Nein',
+  ['yes']                 = 'Ja',
+  ['luxu_purchased']     = 'Du hast ein Fahrzeug gekauft',
+  ['shop_menu']           = 'Drücke ~INPUT_CONTEXT~ um auf das Menü zuzugreifen',
+  ['shop_awaiting_model'] = 'Das Fahrzeug wird gerade  ~g~Entladen & Geladen~s~ bitte warten',
+  ['sell_menu']           = 'Drücke ~INPUT_CONTEXT~ um dein Fahrzeug: ~y~%s~s~ für ~g~$%s~s~ zu Verkaufen',
+  ['license_missing']     = 'Du besitzt keinen PKW\'s Führerschein!',
+  ['luxu_sold_for']      = 'Dein ~b~%s~s~ wurden ~y~Verkauft~s~ für ~g~$%s~s~',
+  ['not_yours']           = 'Dieses Fahrzeug gehört nicht dir',
+}

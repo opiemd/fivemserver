@@ -1,0 +1,16 @@
+Locales['de'] = {
+  ['not_enough_money']    = 'Du hast nicht genügend Geld',
+  ['limo_belongs']       = 'Ein Auto mit dem Nummernschild ~y~%s~s~ gehört jetzt ~b~dir~s~',
+  ['generic_shopitem']    = '$%s',
+  ['limo_dealer']        = 'Limousinen Händler',
+  ['buy_limo_shop']      = 'Möchtest du %s mit %s kg Kofferraum für $%s kaufen?',
+  ['no']                  = 'Nein',
+  ['yes']                 = 'Ja',
+  ['limo_purchased']     = 'Du hast ein Auto gekauft',
+  ['shop_menu']           = 'Drücke ~INPUT_CONTEXT~ um auf das Menü zuzugreifen',
+  ['shop_awaiting_model'] = 'Das Auto wird gerade  ~g~Entladen & Geladen~s~ bitte warten',
+  ['sell_menu']           = 'Drücke ~INPUT_CONTEXT~ um dein Auto: ~y~%s~s~ für ~g~$%s~s~ zu Verkaufen',
+  ['license_missing']     = 'Du besitzt keinen Auto\'s Führerschein!',
+  ['limo_sold_for']      = 'Dein ~b~%s~s~ wurden ~y~Verkauft~s~ für ~g~$%s~s~',
+  ['not_yours']           = 'Dieses Auto gehört nicht dir',
+}
