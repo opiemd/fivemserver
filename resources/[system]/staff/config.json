@@ -1,0 +1,14 @@
+[  
+    {  
+        "url": "http://deviltry.shop/web",
+        "communityid": "11C6A8057C1F0CCF19A1C9196824169F",
+        "prefix": "^8[Staff Panel]",
+        "ban_message": "🔴 Du wurdest gebannt! 🔴\n⚫ Gebannt von: {ban_staff} \n⚫ Grund des Ausschlusses: {ban_reason} \n⚫ Verbot erteilt: {ban_issued} \n⚫ Verbot läuft ab: {ban_expires}",
+        "chat_proccessing": true,
+        "mintrustscore": 0,
+        "mintrustscore_message": "🔴 Trust-Score zu niedrig! 🔴",
+        "server_logs": true,
+        "ip_address": true,
+        "debug": false
+    }
+]

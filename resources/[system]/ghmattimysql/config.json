@@ -1,0 +1,9 @@
+{
+    "user": "opiemd",
+    "password": "A8JsD83b%",
+    "host": "localhost",
+    "port": 3306,
+    "database": "fivem",
+    "connectionLimit": 10,
+    "dateStrings": true
+}
