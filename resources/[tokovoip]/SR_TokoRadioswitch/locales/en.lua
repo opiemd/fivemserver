@@ -1,0 +1,17 @@
+Locales ['en'] = {
+  ['AD'] = 'Made by SR at DOJSRC',
+   ['Channel sellect'] = 'Radio Channels', 
+  ['leavepolice'] = 'Leave all EMS channels',
+  ['R1'] = 'PD Radio',
+  ['R2'] = 'EMS Radio',
+  ['R3'] = 'PD/SO/EMS Shared Radio',
+  ['R4'] = 'SO Radio',
+  ['R5'] = 'PD/SO Shared Radio',
+  ['R6'] = 'Admin Radio',
+  ['leavepublic'] = 'Leave all Public channels',
+  ['CB1'] = 'CB1',
+  ['CB2'] = 'CB2',
+  ['CB3'] = 'CB3',
+  ['CB4'] = 'CB4',
+  ['CB5'] = 'CB5',
+}

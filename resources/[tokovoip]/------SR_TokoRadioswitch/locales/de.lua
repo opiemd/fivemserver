@@ -1,0 +1,18 @@
+Locales ['de'] = {
+  ['AD'] = 'EXIT aus dem Menu',
+   ['Channel sellect'] = 'Funk Kanäle', 
+  ['leavepolice'] = 'Verlasse alle Fraktions-Kanäle',
+  ['leavemafia'] = 'Verlasse alle Admin-Kanäle',
+  ['R1'] = 'Police Funk',
+  ['R2'] = 'Medic Funk',
+  ['R3'] = 'Police/Medic Geteiltes Funk',
+  ['R4'] = 'SO Funk',
+  ['R5'] = 'PD/SO Geteiltes Funk',
+  ['R6'] = 'Admin Funk',
+  ['leavepublic'] = 'Verlasse alle öffentlichen Kanäle',
+  ['CB1'] = 'CB1',
+  ['CB2'] = 'CB2',
+  ['CB3'] = 'CB3',
+  ['CB4'] = 'CB4',
+  ['CB5'] = 'CB5',
+}
